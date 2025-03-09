@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ComponentViewerComponent } from './components/component-viewer/component-viewer.component';
+import { CommonModule } from '@angular/common';
+import testComponents from './components/test-components.json';
+
+interface ComponentData {
+  name: string;
+  description: string;
+  html: string;
+  css: string;
+  js: string;
+}
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [ComponentViewerComponent, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'component-viewer-v1';
+export class AppComponent implements OnInit {
+  components: ComponentData[] = [];
+
+  ngOnInit() {
+    this.components = testComponents.components;
+  }
 }

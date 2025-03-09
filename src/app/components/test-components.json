@@ -1,0 +1,25 @@
+{
+  "components": [
+    {
+      "name": "Counter Component",
+      "description": "Interactive counter with increment and decrement buttons",
+      "html": "<div class=\"counter-component\">\n  <h2>Interactive Counter</h2>\n  <div class=\"counter-display\">\n    <span>{{ counter }}</span>\n  </div>\n  <div class=\"counter-controls\">\n    <button (click)=\"decrementCounter()\">-</button>\n    <button (click)=\"incrementCounter()\">+</button>\n  </div>\n</div>",
+      "css": ".counter-component {\n  text-align: center;\n  padding: 20px;\n  font-family: Arial, sans-serif;\n}\n\n.counter-display {\n  font-size: 48px;\n  margin: 20px 0;\n  color: #2196f3;\n}\n\n.counter-controls {\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n\nbutton {\n  padding: 10px 20px;\n  font-size: 24px;\n  background-color: #4caf50;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n\nbutton:hover {\n  background-color: #45a049;\n}",
+      "js": "constructor() {\n  this.counter = 0;\n}\n\nincrementCounter() {\n  this.counter++;\n}\n\ndecrementCounter() {\n  this.counter--;\n}"
+    },
+    {
+      "name": "Todo List",
+      "description": "Simple todo list with add and remove functionality",
+      "html": "<div class=\"todo-app\">\n  <h2>Todo List</h2>\n  <div class=\"todo-input\">\n    <input type=\"text\" [(ngModel)]=\"newTodo\" placeholder=\"Add new task...\" (keyup.enter)=\"addTodo()\">\n    <button (click)=\"addTodo()\">Add</button>\n  </div>\n  <ul class=\"todo-list\">\n    <li class=\"todo-item\" *ngFor=\"let todo of todos\">\n      <span>{{ todo }}</span>\n      <button class=\"delete-btn\" (click)=\"deleteTodo(todo)\">Delete</button>\n    </li>\n  </ul>\n</div>",
+      "css": ".todo-app {\n  max-width: 400px;\n  margin: 0 auto;\n  padding: 20px;\n  font-family: Arial, sans-serif;\n}\n\n.todo-input {\n  display: flex;\n  gap: 10px;\n  margin-bottom: 20px;\n}\n\ninput {\n  flex: 1;\n  padding: 8px;\n  border: 1px solid #ddd;\n  border-radius: 4px;\n  font-size: 16px;\n}\n\nbutton {\n  padding: 8px 16px;\n  background-color: #2196f3;\n  color: white;\n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #1976d2;\n}\n\n.todo-list {\n  list-style: none;\n  padding: 0;\n}\n\n.todo-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 10px;\n  background-color: #f5f5f5;\n  margin-bottom: 8px;\n  border-radius: 4px;\n}\n\n.delete-btn {\n  background-color: #f44336;\n  padding: 4px 8px;\n}\n\n.delete-btn:hover {\n  background-color: #d32f2f;\n}",
+      "js": "constructor() {\n  this.todos = [];\n  this.newTodo = '';\n}\n\naddTodo() {\n  if (this.newTodo.trim()) {\n    this.todos.push(this.newTodo.trim());\n    this.newTodo = '';\n  }\n}\n\ndeleteTodo(todo) {\n  const index = this.todos.indexOf(todo);\n  if (index !== -1) {\n    this.todos.splice(index, 1);\n  }\n}"
+    },
+    {
+      "name": "Color Picker",
+      "description": "Interactive color picker with RGB sliders",
+      "html": "<div class=\"color-picker\">\n  <h2>Color Picker</h2>\n  <div class=\"color-preview\" [style.backgroundColor]=\"currentColor\"></div>\n  <div class=\"color-controls\">\n    <div class=\"color-slider\">\n      <label>R</label>\n      <input type=\"range\" min=\"0\" max=\"255\" [(ngModel)]=\"red\" (ngModelChange)=\"updateColor()\">\n    </div>\n    <div class=\"color-slider\">\n      <label>G</label>\n      <input type=\"range\" min=\"0\" max=\"255\" [(ngModel)]=\"green\" (ngModelChange)=\"updateColor()\">\n    </div>\n    <div class=\"color-slider\">\n      <label>B</label>\n      <input type=\"range\" min=\"0\" max=\"255\" [(ngModel)]=\"blue\" (ngModelChange)=\"updateColor()\">\n    </div>\n  </div>\n  <div class=\"color-value\">{{ hexColor }}</div>\n</div>",
+      "css": ".color-picker {\n  max-width: 300px;\n  margin: 0 auto;\n  padding: 20px;\n  font-family: Arial, sans-serif;\n}\n\n.color-preview {\n  width: 100%;\n  height: 100px;\n  border-radius: 8px;\n  margin: 20px 0;\n  border: 1px solid #ddd;\n}\n\n.color-controls {\n  display: flex;\n  flex-direction: column;\n  gap: 15px;\n}\n\n.color-slider {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\nlabel {\n  width: 20px;\n  font-weight: bold;\n}\n\ninput[type=\"range\"] {\n  flex: 1;\n}\n\n.color-value {\n  text-align: center;\n  margin-top: 20px;\n  font-family: monospace;\n  font-size: 18px;\n}",
+      "js": "constructor() {\n  this.red = 128;\n  this.green = 128;\n  this.blue = 128;\n  this.currentColor = '';\n  this.hexColor = '';\n  this.updateColor();\n}\n\nupdateColor() {\n  this.currentColor = `rgb(${this.red}, ${this.green}, ${this.blue})`;\n  this.hexColor = this.rgbToHex(this.red, this.green, this.blue);\n}\n\nrgbToHex(r, g, b) {\n  return '#' + [r, g, b].map(x => {\n    const hex = x.toString(16);\n    return hex.length === 1 ? '0' + hex : hex;\n  }).join('');\n}"
+    }
+  ]
+}
