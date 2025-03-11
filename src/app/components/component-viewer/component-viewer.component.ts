@@ -18,31 +18,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <div class="component-viewer">
-      <!-- Preview Section -->
-      <div class="preview-section">
-        <h3>Component Preview</h3>
-        <div class="component-preview">
           <ng-container #dynamicComponentContainer></ng-container>
-        </div>
-      </div>
-
-      <!-- Code Sections -->
-      <div class="code-sections">
-        <div class="code-section">
-          <h3>HTML</h3>
-          <pre>{{ cHtml }}</pre>
-        </div>
-        <div class="code-section">
-          <h3>CSS</h3>
-          <pre>{{ cCss }}</pre>
-        </div>
-        <div class="code-section">
-          <h3>JavaScript</h3>
-          <pre>{{ cJs }}</pre>
-        </div>
-      </div>
-    </div>
   `,
   styles: [
     `
