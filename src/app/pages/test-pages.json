@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "id": "anasayfa",
+      "title": "Ana Sayfa",
+      "description": "Web sitesi ana sayfası",
+      "components": ["navbar", "hero", "footer"]
+    },
+    {
+      "id": "hakkimizda",
+      "title": "Hakkımızda",
+      "description": "Şirket hakkında bilgiler",
+      "components": ["navbar", "about-content", "footer"]
+    },
+    {
+      "id": "iletisim",
+      "title": "İletişim",
+      "description": "İletişim bilgileri ve formu",
+      "components": ["navbar", "contact-form", "map-component", "footer"]
+    },
+    {
+      "id": "nested",
+      "title": "İç İçe Component Örneği",
+      "description": "İç içe component kullanımını gösteren örnek sayfa",
+      "components": ["navbar", "nested-layout", "footer"]
+    }
+  ]
+}

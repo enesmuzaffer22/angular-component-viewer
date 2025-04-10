@@ -1,0 +1,20 @@
+# Rules
+
+## Projenin Amacı:
+Proje, klasik web sayfaların aksine componentlerini veritabanından çekiyor. Buradaki amaç, birden fazla web sayfasını kontrollü bir şekilde yönetebilmek için CMS paneli oluşturmak. Projenin bu kısmında sayfa önizlemeleri yapılıyor. Yani panel kısmı bu proje değil. Bu projede sadece veritabanından componentler çekiliyor.
+
+Tabii şu an veritabanımızın API sistemi hazır olmadığı için, proje içerisinde test.json dosyaları kullanıyoruz.
+
+## Projeyi Geliştirirken Dikkat Etmen Gerekenler:
+- Mümkün olduğunca az ve öz kod yaz.
+- Sana verdiğim görevi bitirene kadar devam et.
+- Sana verdiğim görevi bitirirsen, başka bir görev verilecek.
+- En güncel Angular tekniklerini kullan.
+- Görevleri yerine getirirken terminali kullanabilirsin fakat benden projeyi başlatmamı isteme. Proje zaten başlatılmış olacak.
+
+- Eğer bir arayüz vb. bir şey hazırlarsan aşağıdaki renk kodlarını kullanabilirsin:
+
+```scss
+$primary-color: #00733E;
+$secondary-color: #E0B200;
+```
