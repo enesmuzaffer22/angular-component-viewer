@@ -23,6 +23,18 @@
       "title": "İç İçe Component Örneği",
       "description": "İç içe component kullanımını gösteren örnek sayfa",
       "components": ["navbar", "nested-layout", "footer"]
+    },
+    {
+      "id": "mdbf",
+      "title": "Mühendislik ve Doğa Bilimleri Fakültesi",
+      "description": "MDBF Ana Sayfası",
+      "components": ["navbar-blue", "hero", "footer-blue"]
+    },
+    {
+      "id": "ff",
+      "title": "Fen Fakültesi",
+      "description": "Fen Fakültesi Ana Sayfası",
+      "components": ["navbar-green", "hero", "footer-green"]
     }
   ]
 }

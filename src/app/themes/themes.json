@@ -1,0 +1,48 @@
+{
+  "themes": [
+    {
+      "id": "default",
+      "name": "Varsayılan Tema",
+      "primaryColor": "#00733E",
+      "secondaryColor": "#E0B200",
+      "logoUrl": "assets/logo-default.png",
+      "layoutComponents": {
+        "navbar": "navbar",
+        "footer": "footer"
+      }
+    },
+    {
+      "id": "mdbf",
+      "name": "Mühendislik ve Doğa Bilimleri Fakültesi",
+      "primaryColor": "#0056b3",
+      "secondaryColor": "#00a8e8",
+      "logoUrl": "assets/logo-mdbf.png",
+      "layoutComponents": {
+        "navbar": "navbar-blue",
+        "footer": "footer-blue"
+      }
+    },
+    {
+      "id": "ff",
+      "name": "Fen Fakültesi",
+      "primaryColor": "#00733E",
+      "secondaryColor": "#4CAF50",
+      "logoUrl": "assets/logo-ff.png",
+      "layoutComponents": {
+        "navbar": "navbar-green",
+        "footer": "footer-green"
+      }
+    },
+    {
+      "id": "iibf",
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "primaryColor": "#8E44AD",
+      "secondaryColor": "#9B59B6",
+      "logoUrl": "assets/logo-iibf.png",
+      "layoutComponents": {
+        "navbar": "navbar-purple",
+        "footer": "footer-purple"
+      }
+    }
+  ]
+}
